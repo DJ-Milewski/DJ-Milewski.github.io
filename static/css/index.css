@@ -17,6 +17,29 @@
     grid-column: span 1 / span 1;
 }
 
+#offer ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+#offer li {
+    padding-left: 1.8rem;
+    position: relative;
+    margin-bottom: 0.7rem;
+    font-size: 1.1em;
+    color: var(--color-text-light);
+}
+
+#offer li::before {
+    content: '★';
+    color: var(--color-amber);
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
 #gallery {
     grid-column: 1 / -1;
 }
