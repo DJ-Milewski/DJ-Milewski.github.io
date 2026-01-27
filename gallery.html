@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="static/css/global.css">
+    <link rel="stylesheet" href="static/css/gallery.css">
+</head>
+<body>
+    <div class="sticky-header">
+        <div class="sticky-header-content">
+            <h3 class="sticky-header-title">Galeria</h3>
+            <a href="index.html" class="btn btn-sticky">Strona Główna</a>
+        </div>
+    </div>
+    <header>
+        <h1>Galeria</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="galleries-wrapper">
+            <h2 class="text-center">ZDJĘCIA</h2>
+            <div class="gallery-container" id="gallery-images">
+            </div>
+            <div class="button-container">
+                <button id="show-more-images" class="show-more-button">Więcej</button>
+            </div>
+
+            <h2 class="text-center">FILMY</h2>
+            <div class="gallery-container" id="gallery-videos">
+            </div>
+            <div class="button-container">
+                <button id="show-more-videos" class="show-more-button">Więcej</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content-wrapper">
+            <img id="modal-img" class="modal-content">
+            <video id="modal-video" class="modal-content" controls>
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/people/S%C5%82awek-Milewski">Facebook</a>
+        </div>
+        <p>&copy; 2026 DJ MILEWSKI. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="static/js/global.js"></script>
+    <script src="static/js/gallery-data.js"></script>
+    <script src="static/js/gallery.js"></script>
+</body>
+</html>
