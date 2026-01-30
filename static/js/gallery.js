@@ -60,6 +60,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const initialLoad = 6;
         const loadMoreCount = 6;
 
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
         function createGalleryItem(src, index) {
             const galleryItem = document.createElement('div');
             galleryItem.classList.add('gallery-item', 'fade-in');
@@ -106,9 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     mediaItems.push(src);
                     const newItem = createGalleryItem(src, newIndex);
                     container.appendChild(newItem);
-                    setTimeout(() => {
-                        newItem.classList.remove('fade-in');
-                    }, 50);
+                    observer.observe(newItem);
                 });
                 offset += data.length;
             }
